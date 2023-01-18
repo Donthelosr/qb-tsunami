@@ -47,7 +47,7 @@ RegisterNetEvent('strez:client:SendMailTsunamiManual', function(text)
     Wait(math.random(30000, 60000))
     TriggerServerEvent('qb-weathersync:server:setWeather', 'THUNDER')
     Wait(math.random(25000, 35000))
-    TriggerEvent('InteractSound_CL:PlayOnOne', 'raidsiren', 0.1)
+  --  TriggerEvent('InteractSound_CL:PlayOnOne', 'raidsiren', 0.05)
     TsunamiEffect()
 end)
 
@@ -73,7 +73,7 @@ RegisterNetEvent('strez:client:SendMailTsunamiAuto5', function(text)
     TriggerEvent('InteractSound_CL:PlayOnOne', 'Alert', 0.5)
     Wait(math.random(7000, 13000))
     Wait(35000)
-	TriggerEvent('InteractSound_CL:PlayOnOne', 'raidsiren', 0.1)
+	
     TriggerServerEvent('qb-phone:server:sendNewMail', {
         sender = 'District of Los Santos',
         subject = 'Emergency Broadcast',
@@ -89,6 +89,7 @@ end)
 RegisterNetEvent('strez:client:SendMailTsunamiAuto1', function(text)
     TriggerEvent('InteractSound_CL:PlayOnOne', 'Alert', 0.5)
     Wait(math.random(7000, 13000))
+   -- TriggerEvent('InteractSound_CL:PlayOnOne', 'raidsiren', 0.05)
     TriggerServerEvent('qb-phone:server:sendNewMail', {
         sender = 'District of Los Santos',
         subject = 'Emergency Broadcast',
